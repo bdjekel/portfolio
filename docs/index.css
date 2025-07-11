@@ -321,6 +321,33 @@ body {
   margin: 0;
 }
 
+.project-card-badges {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #0072ff 0%, #00eaff 100%);
+  color: var(--color-bg);
+  font-size: 0.98rem;
+  font-weight: 500;
+  padding: 6px 18px;
+  border-radius: 999px;
+  letter-spacing: 0.01em;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  user-select: none;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+
+.project-badge:hover {
+  background: linear-gradient(135deg, #0072ff 0%, #00eaff 100%);
+  color: var(--color-bg);
+}
+
 .experience .job {
   display: grid;
   grid-template-columns: auto 1fr;
