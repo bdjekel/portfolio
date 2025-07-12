@@ -301,7 +301,7 @@ body {
   padding: 0;
   font-size: 1.25rem;
   color: var(--color-white);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
   display: inline;
 }
@@ -318,7 +318,9 @@ body {
 .project-card-desc {
   color: var(--color-text-secondary);
   font-size: 1rem;
+  hyphens: auto;
   margin: 0;
+  text-wrap: pretty;
 }
 
 .project-card-badges {
@@ -326,15 +328,16 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  width: 80%;
 }
 
 .project-badge {
   display: inline-block;
   background: linear-gradient(135deg, #0072ff 0%, #00eaff 100%);
   color: var(--color-bg);
-  font-size: 0.98rem;
+  font-size: 0.784rem;
   font-weight: 500;
-  padding: 6px 18px;
+  padding: 6px 14px;
   border-radius: 999px;
   letter-spacing: 0.01em;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
