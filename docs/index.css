@@ -55,7 +55,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   min-height: 100vh;
-  /* Add container query context */
+  /* Add container query context for grid-based layout */
   container-type: inline-size;
   container-name: main-layout;
 }
@@ -70,7 +70,7 @@ body {
   background: var(--color-bg);
   border-right: 1px solid var(--color-border);
   z-index: 10;
-  /* Add container query context for sidebar */
+  /* Container query context for sidebar (enables container queries on sidebar) */
   container-type: inline-size;
   container-name: sidebar;
 }
@@ -154,7 +154,6 @@ body {
   opacity: 0.8;
 }
 
-/* Remove background for img elements */
 .icon img {
   object-fit: contain;
   background: transparent;
@@ -198,21 +197,17 @@ body {
   grid-column: 2;
   width: 100%;
   min-width: var(--main-content-min-width);
-  /* Add container query context for main content */
+  /* Container query context for main content (enables container queries on main content) */
   container-type: inline-size;
   container-name: main-content;
-  /* Add padding for content */
   padding: var(--container-padding);
   box-sizing: border-box;
   border: none;
-  /* Debug: add background to see if content area is visible */
   background: var(--color-bg);
 }
 
 .about {
   margin-bottom: var(--section-margin-bottom);
-  /* Debug: add border to see section boundaries */
-  /* border: 1px solid var(--color-section-border); */
   padding: var(--section-padding);
 }
 
@@ -225,15 +220,11 @@ body {
 
 .experience {
   margin-bottom: var(--section-margin-bottom);
-  /* Debug: add border to see section boundaries */
-  /* border: 1px solid var(--color-section-border); */
   padding: var(--section-padding);
 }
 
 .projects {
   margin-bottom: var(--section-margin-bottom);
-  /* Debug: add border to see section boundaries */
-  /* border: 1px solid var(--color-section-border); */
   padding: var(--section-padding);
 }
 
@@ -242,7 +233,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Section line styling */
+/* Section line uses grid to extend from heading to container edge */
 h2 {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -259,10 +250,6 @@ h2 {
   min-width: 24px;
 }
 
-.projects p {
-  color: var(--color-text-primary);
-}
-
 .project-cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -274,7 +261,7 @@ h2 {
   grid-template-columns: 140px 1fr;
   align-items: start;
   background: transparent;
-  /* border-radius: 8px;  Don't need because background is transparent. */
+  /* No border-radius because background is transparent */
   box-shadow: none;
   overflow: hidden;
   transition: box-shadow 0.2s, transform 0.2s;
@@ -317,10 +304,11 @@ h2 {
   margin: 0;
   padding: 0;
   font-size: 1.25rem;
-  color: var(--color-text-secondary);
   font-weight: 500;
   line-height: 1;
   display: inline;
+  color: var(--color-text-secondary);
+  transition: color 0.2s;
 }
 
 .project-card-title-link {
@@ -329,21 +317,25 @@ h2 {
 }
 
 .project-card-title-link:hover .project-card-title {
-  text-decoration: underline;
+  color: var(--color-text-primary);
 }
 
 .project-card-desc {
-  color: var(--color-text-secondary);
   font-size: 1rem;
   hyphens: auto;
   margin: 0;
   text-wrap: pretty;
+  color: var(--color-text-secondary);
   transition: color 0.2s;
 }
 
-/* .projects .project-card:hover .project-card-desc {
+.project-card:hover .project-card-title {
   color: var(--color-text-primary);
-} */
+}
+
+.project-card:hover .project-card-desc {
+  color: var(--color-text-primary);
+}
 
 .project-card-badges {
   margin-top: 14px;
@@ -373,11 +365,8 @@ h2 {
   color: var(--color-bg);
 }
 
-/* Course cards - replicating project card styles */
 .courses {
   margin-bottom: var(--section-margin-bottom);
-  /* Debug: add border to see section boundaries */
-  /* border: 1px solid var(--color-section-border); */
   padding: var(--section-padding);
 }
 
@@ -397,7 +386,7 @@ h2 {
   grid-template-columns: 140px 1fr;
   align-items: start;
   background: transparent;
-  /* border-radius: 8px;  Don't need because background is transparent. */
+  /* No border-radius because background is transparent */
   box-shadow: none;
   overflow: hidden;
   transition: box-shadow 0.2s, transform 0.2s;
@@ -452,7 +441,7 @@ h2 {
 }
 
 .course-card-title-link:hover .course-card-title {
-  text-decoration: underline;
+  color: var(--color-text-primary);
 }
 
 .course-card-desc {
@@ -525,17 +514,43 @@ h2 {
   font-size: var(--font-size-base);
 }
 
-a,
-a:link,
-a:visited {
+/* General link styles for about section only. Uses background gradient for animated underline on multi-line links. */
+.about a,
+.about a:link,
+.about a:visited {
   color: var(--color-text-tertiary);
   text-decoration: none;
+  background-image: linear-gradient(var(--color-text-primary), var(--color-text-primary));
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s, color 0.25s;
 }
 
-a:hover,
-a:active {
+.about a:hover,
+.about a:active {
   color: var(--color-text-primary);
+  background-size: 100% 1px;
+}
+
+.project-card-title-link,
+.course-card-title-link {
   text-decoration: none;
+  color: inherit;
+  position: relative;
+  background-image: linear-gradient(var(--color-text-primary), var(--color-text-primary));
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s, color 0.25s;
+}
+
+.project-card-title-link:hover,
+.project-card-title-link:active,
+.course-card-title-link:hover,
+.course-card-title-link:active {
+  color: var(--color-text-primary);
+  background-size: 100% 1px;
 }
 
 @media (max-width: 900px) {
@@ -594,7 +609,6 @@ a:active {
   }
 }
 
-/* Container query for smaller screens */
 @container main-layout (max-width: 600px) {
   .sidebar {
     width: 100%;
