@@ -10,7 +10,7 @@
   --color-section-border: #d1c7b3;
   --color-icon-bg: #233554;
 
-  --font-family: "Inter", Arial, sans-serif;
+  --font-family: "Exo", Arial, sans-serif;
   --font-size-title-header: 4.5em;
   --font-size-lg: 2.5rem;
   --font-size-md: 1.25rem;
@@ -47,6 +47,7 @@
 body {
   margin: 0;
   font-family: var(--font-family);
+  font-weight: 200;
   background: var(--color-bg);
   color: var(--color-text-primary);
 }
@@ -86,14 +87,14 @@ body {
 
 .name {
   font-size: var(--font-size-title-header);
-  font-weight: 700;
+  font-weight: 300;
   margin: 0 0 10px 0;
   color: var(--color-white);
 }
 
 .title {
   font-size: var(--font-size-md);
-  font-weight: 500;
+  font-weight: 300;
   margin: 0 0 20px 0;
   color: var(--color-text-secondary);
 }
@@ -256,7 +257,7 @@ h2 {
   gap: 32px;
 }
 
-.project-card {
+.card {
   display: grid;
   grid-template-columns: 140px 1fr;
   align-items: start;
@@ -267,12 +268,12 @@ h2 {
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
-.project-card:hover {
+.card:hover {
   box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.18);
   transform: translateY(-2px) scale(1.01);
 }
 
-.project-card-img-link {
+.card-img-link {
   display: block;
   width: 140px;
   aspect-ratio: 16 / 9;
@@ -282,7 +283,7 @@ h2 {
   align-self: start;
 }
 
-.project-card-img {
+.card-img {
   display: block;
   width: 100%;
   height: 100%;
@@ -290,7 +291,7 @@ h2 {
   border-radius: 0;
 }
 
-.project-card-content {
+.card-content {
   padding: 0 24px;
   display: flex;
   flex-direction: column;
@@ -300,27 +301,27 @@ h2 {
   min-height: 0;
 }
 
-.project-card-title {
+.card-title {
   margin: 0;
   padding: 0;
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: calc(var(--font-weight-base) - 100);
   line-height: 1;
   display: inline;
   color: var(--color-text-secondary);
   transition: color 0.2s;
 }
 
-.project-card-title-link {
+.card-title-link {
   text-decoration: none;
   color: inherit;
 }
 
-.project-card-title-link:hover .project-card-title {
+.card-title-link:hover .card-title {
   color: var(--color-text-primary);
 }
 
-.project-card-desc {
+.card-desc {
   font-size: 1rem;
   hyphens: auto;
   margin: 0;
@@ -329,15 +330,15 @@ h2 {
   transition: color 0.2s;
 }
 
-.project-card:hover .project-card-title {
+.card:hover .card-title {
   color: var(--color-text-primary);
 }
 
-.project-card:hover .project-card-desc {
+.card:hover .card-desc {
   color: var(--color-text-primary);
 }
 
-.project-card-badges {
+.card-badges {
   margin-top: 14px;
   display: flex;
   flex-wrap: wrap;
@@ -345,24 +346,20 @@ h2 {
   width: 80%;
 }
 
-.project-badge {
+.badge {
   display: inline-block;
-  background: linear-gradient(135deg, #0072ff 0%, #00eaff 100%);
-  color: var(--color-bg);
+  /* background: linear-gradient(135deg, #0072ff 0%, #00eaff 100%); */
+  background: transparent;
+  border: 1px solid var(--color-text-secondary);
+  color: var(--color-text-secondary);
   font-size: 0.784rem;
-  font-weight: 500;
+  font-weight: 400;
   padding: 6px 14px;
   border-radius: 999px;
-  letter-spacing: 0.01em;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.04em;
   user-select: none;
   white-space: nowrap;
   transition: background 0.2s, color 0.2s;
-}
-
-.project-badge:hover {
-  background: linear-gradient(135deg, #0072ff 0%, #00eaff 100%);
-  color: var(--color-bg);
 }
 
 .courses {
@@ -379,78 +376,6 @@ h2 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
-}
-
-.course-card {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  align-items: start;
-  background: transparent;
-  /* No border-radius because background is transparent */
-  box-shadow: none;
-  overflow: hidden;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-
-.course-card:hover {
-  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.18);
-  transform: translateY(-2px) scale(1.01);
-}
-
-.course-card-img-link {
-  display: block;
-  width: 140px;
-  aspect-ratio: 16 / 9;
-  background: #222;
-  overflow: hidden;
-  border-radius: 8px;
-  align-self: start;
-}
-
-.course-card-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0;
-}
-
-.course-card-content {
-  padding: 0 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: 100%;
-  min-height: 0;
-}
-
-.course-card-title {
-  margin: 0;
-  padding: 0;
-  font-size: 1.25rem;
-  color: var(--color-text-secondary);
-  font-weight: 500;
-  line-height: 1;
-  display: inline;
-}
-
-.course-card-title-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.course-card-title-link:hover .course-card-title {
-  color: var(--color-text-primary);
-}
-
-.course-card-desc {
-  color: var(--color-text-secondary);
-  font-size: 1rem;
-  hyphens: auto;
-  margin: 0;
-  text-wrap: pretty;
-  transition: color 0.2s;
 }
 
 .course-chapters {
@@ -533,24 +458,19 @@ h2 {
   background-size: 100% 1px;
 }
 
-.project-card-title-link,
-.course-card-title-link {
+.card-title-link {
   text-decoration: none;
   color: inherit;
   position: relative;
-  background-image: linear-gradient(var(--color-text-primary), var(--color-text-primary));
   background-size: 0% 1px;
   background-position: 0 100%;
   background-repeat: no-repeat;
   transition: background-size 0.25s, color 0.25s;
 }
 
-.project-card-title-link:hover,
-.project-card-title-link:active,
-.course-card-title-link:hover,
-.course-card-title-link:active {
+.card:hover .badge {
   color: var(--color-text-primary);
-  background-size: 100% 1px;
+  border-color: var(--color-text-primary);
 }
 
 @media (max-width: 900px) {
@@ -565,48 +485,26 @@ h2 {
     border-bottom: 1px solid var(--color-border);
   }
   .main-content {
-    margin-left: 0;
-    padding: var(--container-padding-mobile);
     grid-column: 1;
   }
 }
 
 @media (max-width: 700px) {
-  .project-cards {
+  .cards {
     gap: 20px;
   }
-  .project-card {
+  .card {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
   }
-  .project-card-img-link {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    border-radius: 16px 16px 0 0;
-    align-self: stretch;
+
+  .card-img-link {
+    height: 100%;
   }
-  .project-card-content {
-    padding: 0 12px;
+
+  .card-content {
+    padding: 24px 0;
   }
   
-  .course-cards {
-    gap: 20px;
-  }
-  .course-card {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-  }
-  .course-card-img-link {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    border-radius: 16px 16px 0 0;
-    align-self: stretch;
-  }
-  .course-card-content {
-    padding: 0 12px;
-  }
 }
 
 @container main-layout (max-width: 600px) {
@@ -618,6 +516,6 @@ h2 {
 
   .main-content {
     grid-column: 1;
-    padding: var(--container-padding-small);
+    padding: var(--container-padding-mobile);
   }
 }

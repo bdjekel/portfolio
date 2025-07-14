@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brian Jekel - Portfolio</title>
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -14,7 +17,7 @@
         <aside class="sidebar">
             <div class="sidebar-content">
                 <h1 class="name">Brian Jekel</h1>
-                <h2 class="title">Aspiring Software Engineer</h2>
+                <h2 class="title">Freelance Software Engineer</h2>
                 <p class="subtitle">I build full stack web applications for me. I'd like to build them for you too.</p>
                 <nav class="nav">
                     <ul>
@@ -57,76 +60,74 @@
             <section class="projects" id="projects">
                 <h2>Projects<span class="section-line"></span></h2>
                 <div class="project-cards">
-                    <div class="project-card">
-                        <a href="https://github.com/bdjekel/chirpy" target="_blank" class="project-card-img-link">
-                            <img src="images/chirpy-hummingbird.svg" alt="GitHub Repo: chirpy" class="project-card-img">
+                    <div class="card">
+                        <a href="https://github.com/bdjekel/chirpy" target="_blank" class="card-img-link">
+                            <img src="images/chirpy-hummingbird.svg" alt="GitHub Repo: chirpy" class="card-img">
                         </a>
-                        <div class="project-card-content">
-                            <a href="https://github.com/bdjekel/chirpy" target="_blank" class="project-card-title-link">
-                                <h3 class="project-card-title">Chirpy - Twitter-style API ↗</h3>
+                        <div class="card-content">
+                            <a href="https://github.com/bdjekel/chirpy" target="_blank" class="card-title-link">
+                                <h3 class="card-title">Chirpy - Twitter-style API ↗</h3>
                             </a>
-                            <p class="project-card-desc">Full-featured Twitter-style microblogging API built in Go with
+                            <p class="card-desc">Full-featured Twitter-style microblogging API built in Go with
                                 JWT authentication, refresh token rotation, content moderation, PostgreSQL database, and
                                 admin dashboard. Demonstrates modern REST API development, secure password hashing,
                                 comprehensive error handling, and database design best practices.</p>
-                            <div class="project-card-badges">
-                                <span class="project-badge">Go</span>
-                                <span class="project-badge">PostgreSQL</span>
-                                <span class="project-badge">HTML</span>
-                                <span class="project-badge">SQLC</span>
-                                <span class="project-badge">JWT</span>
-                                <span class="project-badge">Auth</span>
-                                <span class="project-badge">CORS</span>
-                                <span class="project-badge">OpenAPI</span>
+                            <div class="card-badges">
+                                <span class="badge">Go</span>
+                                <span class="badge">PostgreSQL</span>
+                                <span class="badge">HTML</span>
+                                <span class="badge">SQLC</span>
+                                <span class="badge">JWT</span>
+                                <span class="badge">Auth</span>
+                                <span class="badge">CORS</span>
+                                <span class="badge">OpenAPI</span>
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="card">
                         <a href="https://github.com/bdjekel/static_site_generator" target="_blank"
-                            class="project-card-img-link">
-                            <img src="images/ssg.png" alt="GitHub Repo: static_site_generator" class="project-card-img">
+                            class="card-img-link">
+                            <img src="images/ssg.png" alt="GitHub Repo: static_site_generator" class="card-img">
                         </a>
-                        <div class="project-card-content">
+                        <div class="card-content">
                             <a href="https://github.com/bdjekel/static_site_generator" target="_blank"
-                                class="project-card-title-link">
-                                <h3 class="project-card-title">Static Site Generator ↗</h3>
+                                class="card-title-link">
+                                <h3 class="card-title">Static Site Generator ↗</h3>
                             </a>
-                            <p class="project-card-desc">A custom static site generator. Converts Markdown files into
+                            <p class="card-desc">A custom static site generator. Converts Markdown files into
                                 HTML pages. The project demonstrates a complete implementation of a markdown parser and
                                 HTML generator from scratch, showcasing object-oriented design patterns and text
                                 processing algorithms.</p>
-                            <div class="project-card-badges">
-                                <span class="project-badge">Python</span>
-                                <span class="project-badge">OOP</span>
-                                <span class="project-badge">File I/O</span>
-                                <span class="project-badge">Data Structures</span>
-                                <span class="project-badge">Algorithms</span>
-                                <span class="project-badge">Recursion</span>
-                                <span class="project-badge">Templating</span>
-                                <span class="project-badge">Regex</span>
+                            <div class="card-badges">
+                                <span class="badge">Python</span>
+                                <span class="badge">OOP</span>
+                                <span class="badge">File I/O</span>
+                                <span class="badge">Data Structures</span>
+                                <span class="badge">Algorithms</span>
+                                <span class="badge">Recursion</span>
+                                <span class="badge">Templating</span>
+                                <span class="badge">Regex</span>
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <a href="https://www.blackdiamondpropertygrp.com/" target="_blank"
-                            class="project-card-img-link">
-                            <img src="images/Houses.gif" alt="Black Diamond Property Group" class="project-card-img">
+                    <div class="card">
+                        <a href="https://www.blackdiamondpropertygrp.com/" target="_blank" class="card-img-link">
+                            <img src="images/Houses.gif" alt="Black Diamond Property Group" class="card-img">
                         </a>
-                        <div class="project-card-content">
-                            <a href="https://www.blackdiamondpropertygrp.com/" target="_blank"
-                                class="project-card-title-link">
-                                <h3 class="project-card-title">Black Diamond Property Group ↗</h3>
+                        <div class="card-content">
+                            <a href="https://www.blackdiamondpropertygrp.com/" target="_blank" class="card-title-link">
+                                <h3 class="card-title">Black Diamond Property Group ↗</h3>
                             </a>
-                            <p class="project-card-desc">Modern landing site for a real estate professional. Written in
+                            <p class="card-desc">Modern landing site for a real estate professional. Written in
                                 Next.js/TypeScript, the site features responsive design, Calendly integration, dynamic
                                 navigation, property showcases, and performance optimization.</p>
-                            <div class="project-card-badges">
-                                <span class="project-badge">React</span>
-                                <span class="project-badge">TypeScript</span>
-                                <span class="project-badge">Next.js</span>
-                                <span class="project-badge">Tailwind</span>
-                                <span class="project-badge">SCSS</span>
-                                <span class="project-badge">JSX</span>
+                            <div class="card-badges">
+                                <span class="badge">React</span>
+                                <span class="badge">TypeScript</span>
+                                <span class="badge">Next.js</span>
+                                <span class="badge">Tailwind</span>
+                                <span class="badge">SCSS</span>
+                                <span class="badge">JSX</span>
                             </div>
                         </div>
                     </div>
@@ -135,289 +136,282 @@
             <section class="courses" id="courses">
                 <h2>Courses<span class="section-line"></span></h2>
                 <div class="course-cards">
-                    <div class="course-card">
-                        <a href="https://www.boot.dev/courses/learn-linux" target="_blank" class="course-card-img-link">
+                    <div class="card">
+                        <a href="https://www.boot.dev/courses/learn-linux" target="_blank" class="card-img-link">
                             <img src="images/learn_linux.png" alt="Learn Linux Course Certificate - Brian Jekel"
-                                class="course-card-img">
+                                class="card-img">
                         </a>
-                        <div class="course-card-content">
-                            <a href="https://www.boot.dev/courses/learn-linux" target="_blank"
-                                class="course-card-title-link">
-                                <h3 class="course-card-title">Learn Linux ↗</h3>
+                        <div class="card-content">
+                            <a href="https://www.boot.dev/courses/learn-linux" target="_blank" class="card-title-link">
+                                <h3 class="card-title">Learn Linux ↗</h3>
                             </a>
-                            <p class="course-card-desc">Comprehensive Linux course covering terminal navigation, file
+                            <p class="card-desc">Comprehensive Linux course covering terminal navigation, file
                                 management, permissions, program execution, input/output operations, and package
                                 management. Learn to navigate Unix-like filesystems and automate developer tasks with
                                 powerful CLI tools like grep, find, and pipes.</p>
-                            <div class="course-chapters">
-                                <span class="course-chapter">Terminals and Shells</span>
-                                <span class="course-chapter">Filesystems</span>
-                                <span class="course-chapter">Permissions</span>
-                                <span class="course-chapter">Programs</span>
-                                <span class="course-chapter">Input/Output</span>
-                                <span class="course-chapter">Packages</span>
+                            <div class="card-badges">
+                                <span class="badge">Terminals and Shells</span>
+                                <span class="badge">Filesystems</span>
+                                <span class="badge">Permissions</span>
+                                <span class="badge">Programs</span>
+                                <span class="badge">Input/Output</span>
+                                <span class="badge">Packages</span>
                             </div>
                         </div>
                     </div>
-                    <div class="course-card">
-                        <a href="https://www.boot.dev/courses/learn-go" target="_blank" class="course-card-img-link">
+                    <div class="card">
+                        <a href="https://www.boot.dev/courses/learn-go" target="_blank" class="card-img-link">
                             <img src="images/learn_go.png" alt="Learn Go Course Certificate - Brian Jekel"
-                                class="course-card-img">
+                                class="card-img">
                         </a>
-                        <div class="course-card-content">
-                            <a href="https://www.boot.dev/courses/learn-go" target="_blank"
-                                class="course-card-title-link">
-                                <h3 class="course-card-title">Learn Go ↗</h3>
+                        <div class="card-content">
+                            <a href="https://www.boot.dev/courses/learn-go" target="_blank" class="card-title-link">
+                                <h3 class="card-title">Learn Go ↗</h3>
                             </a>
-                            <p class="course-card-desc">Master the Go programming language with comprehensive coverage
+                            <p class="card-desc">Master the Go programming language with comprehensive coverage
                                 of syntax, data structures, concurrency patterns, and best practices. Learn to build
                                 efficient, scalable applications using Go's powerful features.</p>
-                            <div class="course-chapters">
-                                <span class="course-chapter">Variables</span>
-                                <span class="course-chapter">Functions</span>
-                                <span class="course-chapter">Structs</span>
-                                <span class="course-chapter">Interfaces</span>
-                                <span class="course-chapter">Goroutines</span>
-                                <span class="course-chapter">Channels</span>
-                                <span class="course-chapter">Testing</span>
-                                <span class="course-chapter">Packages</span>
+                            <div class="card-badges">
+                                <span class="badge">Variables</span>
+                                <span class="badge">Functions</span>
+                                <span class="badge">Structs</span>
+                                <span class="badge">Interfaces</span>
+                                <span class="badge">Goroutines</span>
+                                <span class="badge">Channels</span>
+                                <span class="badge">Testing</span>
+                                <span class="badge">Packages</span>
                             </div>
                         </div>
                     </div>
-                    <div class="course-card">
+                    <div class="card">
                         <a href="https://www.boot.dev/courses/learn-http-servers-in-go" target="_blank"
-                            class="course-card-img-link">
+                            class="card-img-link">
                             <img src="images/learn_http_servers_in_go.png"
-                                alt="Learn HTTP Servers in Go Course Certificate - Brian Jekel" class="course-card-img">
+                                alt="Learn HTTP Servers in Go Course Certificate - Brian Jekel" class="card-img">
                         </a>
-                        <div class="course-card-content">
+                        <div class="card-content">
                             <a href="https://www.boot.dev/courses/learn-http-servers-in-go" target="_blank"
-                                class="course-card-title-link">
-                                <h3 class="course-card-title">Learn HTTP Servers in Go ↗</h3>
+                                class="card-title-link">
+                                <h3 class="card-title">Learn HTTP Servers in Go ↗</h3>
                             </a>
-                            <p class="course-card-desc">Build robust HTTP servers using Go's standard library. Learn
+                            <p class="card-desc">Build robust HTTP servers using Go's standard library. Learn
                                 routing, middleware, authentication, database integration, and deployment strategies for
                                 production-ready web services.</p>
-                            <div class="course-chapters">
-                                <span class="course-chapter">HTTP Protocol</span>
-                                <span class="course-chapter">net/http</span>
-                                <span class="course-chapter">Routing</span>
-                                <span class="course-chapter">Middleware</span>
-                                <span class="course-chapter">JSON</span>
-                                <span class="course-chapter">Database</span>
-                                <span class="course-chapter">Authentication</span>
-                                <span class="course-chapter">Deployment</span>
+                            <div class="card-badges">
+                                <span class="badge">HTTP Protocol</span>
+                                <span class="badge">net/http</span>
+                                <span class="badge">Routing</span>
+                                <span class="badge">Middleware</span>
+                                <span class="badge">JSON</span>
+                                <span class="badge">Database</span>
+                                <span class="badge">Authentication</span>
+                                <span class="badge">Deployment</span>
                             </div>
                         </div>
                     </div>
-                    <div class="course-card">
+                    <div class="card">
                         <a href="https://www.boot.dev/courses/learn-http-clients-in-go" target="_blank"
-                            class="course-card-img-link">
+                            class="card-img-link">
                             <img src="images/learn_http_clients_in_go.png"
-                                alt="Learn HTTP Clients in Go Course Certificate - Brian Jekel" class="course-card-img">
+                                alt="Learn HTTP Clients in Go Course Certificate - Brian Jekel" class="card-img">
                         </a>
-                        <div class="course-card-content">
+                        <div class="card-content">
                             <a href="https://www.boot.dev/courses/learn-http-clients-in-go" target="_blank"
-                                class="course-card-title-link">
-                                <h3 class="course-card-title">Learn HTTP Clients in Go ↗</h3>
+                                class="card-title-link">
+                                <h3 class="card-title">Learn HTTP Clients in Go ↗</h3>
                             </a>
-                            <p class="course-card-desc">Master HTTP client development in Go. Learn to consume APIs,
+                            <p class="card-desc">Master HTTP client development in Go. Learn to consume APIs,
                                 handle different content types, implement retry logic, and build robust client
                                 applications with proper error handling.</p>
-                            <div class="course-chapters">
-                                <span class="course-chapter">HTTP Client</span>
-                                <span class="course-chapter">GET Requests</span>
-                                <span class="course-chapter">POST Requests</span>
-                                <span class="course-chapter">JSON</span>
-                                <span class="course-chapter">Headers</span>
-                                <span class="course-chapter">Error Handling</span>
-                                <span class="course-chapter">Context</span>
-                                <span class="course-chapter">Testing</span>
+                            <div class="card-badges">
+                                <span class="badge">HTTP Client</span>
+                                <span class="badge">GET Requests</span>
+                                <span class="badge">POST Requests</span>
+                                <span class="badge">JSON</span>
+                                <span class="badge">Headers</span>
+                                <span class="badge">Error Handling</span>
+                                <span class="badge">Context</span>
+                                <span class="badge">Testing</span>
                             </div>
                         </div>
                     </div>
-                    <div class="course-card">
-                        <a href="https://www.boot.dev/courses/learn-docker" target="_blank"
-                            class="course-card-img-link">
+                    <div class="card">
+                        <a href="https://www.boot.dev/courses/learn-docker" target="_blank" class="card-img-link">
                             <img src="images/learn_docker.png" alt="Learn Docker Course Certificate - Brian Jekel"
-                                class="course-card-img">
+                                class="card-img">
                         </a>
-                        <div class="course-card-content">
-                            <a href="https://www.boot.dev/courses/learn-docker" target="_blank"
-                                class="course-card-title-link">
-                                <h3 class="course-card-title">Learn Docker ↗</h3>
+                        <div class="card-content">
+                            <a href="https://www.boot.dev/courses/learn-docker" target="_blank" class="card-title-link">
+                                <h3 class="card-title">Learn Docker ↗</h3>
                             </a>
-                            <p class="course-card-desc">Master containerization with Docker. Learn to build, run, and
+                            <p class="card-desc">Master containerization with Docker. Learn to build, run, and
                                 manage containers, create multi-stage builds, work with Docker Compose, and deploy
                                 containerized applications.</p>
-                            <div class="course-chapters">
-                                <span class="course-chapter">Containers</span>
-                                <span class="course-chapter">Images</span>
-                                <span class="course-chapter">Dockerfile</span>
-                                <span class="course-chapter">Docker Compose</span>
-                                <span class="course-chapter">Volumes</span>
-                                <span class="course-chapter">Networks</span>
-                                <span class="course-chapter">Multi-stage</span>
-                                <span class="course-chapter">Deployment</span>
+                            <div class="card-badges">
+                                <span class="badge">Containers</span>
+                                <span class="badge">Images</span>
+                                <span class="badge">Dockerfile</span>
+                                <span class="badge">Docker Compose</span>
+                                <span class="badge">Volumes</span>
+                                <span class="badge">Networks</span>
+                                <span class="badge">Multi-stage</span>
+                                <span class="badge">Deployment</span>
                             </div>
                         </div>
                     </div>
-                    <div class="course-card">
+                    <div class="card">
                         <a href="https://www.boot.dev/courses/learn-memory-management-in-c" target="_blank"
-                            class="course-card-img-link">
+                            class="card-img-link">
                             <img src="images/learn_memory_management_in_c.png"
-                                alt="Learn Memory Management in C Course Certificate - Brian Jekel"
-                                class="course-card-img">
+                                alt="Learn Memory Management in C Course Certificate - Brian Jekel" class="card-img">
                         </a>
-                        <div class="course-card-content">
+                        <div class="card-content">
                             <a href="https://www.boot.dev/courses/learn-memory-management-in-c" target="_blank"
-                                class="course-card-title-link">
-                                <h3 class="course-card-title">Learn Memory Management in C ↗</h3>
+                                class="card-title-link">
+                                <h3 class="card-title">Learn Memory Management in C ↗</h3>
                             </a>
-                            <p class="course-card-desc">Deep dive into C memory management. Learn manual memory
+                            <p class="card-desc">Deep dive into C memory management. Learn manual memory
                                 allocation, deallocation, memory leaks, garbage collection concepts, and best practices
                                 for efficient memory usage.</p>
-                            <div class="course-chapters">
-                                <span class="course-chapter">Memory Layout</span>
-                                <span class="course-chapter">malloc/free</span>
-                                <span class="course-chapter">Pointers</span>
-                                <span class="course-chapter">Memory Leaks</span>
-                                <span class="course-chapter">Valgrind</span>
-                                <span class="course-chapter">Garbage Collection</span>
-                                <span class="course-chapter">Memory Pools</span>
-                                <span class="course-chapter">Optimization</span>
+                            <div class="card-badges">
+                                <span class="badge">Memory Layout</span>
+                                <span class="badge">malloc/free</span>
+                                <span class="badge">Pointers</span>
+                                <span class="badge">Memory Leaks</span>
+                                <span class="badge">Valgrind</span>
+                                <span class="badge">Garbage Collection</span>
+                                <span class="badge">Memory Pools</span>
+                                <span class="badge">Optimization</span>
                             </div>
                         </div>
                     </div>
-                    <div class="course-card">
-                        <a href="https://www.boot.dev/courses/learn-git" target="_blank" class="course-card-img-link">
+                    <div class="card">
+                        <a href="https://www.boot.dev/courses/learn-git" target="_blank" class="card-img-link">
                             <img src="images/learn_git.png" alt="Learn Git Course Certificate - Brian Jekel"
-                                class="course-card-img">
+                                class="card-img">
                         </a>
-                        <div class="course-card-content">
-                            <a href="https://www.boot.dev/courses/learn-git" target="_blank"
-                                class="course-card-title-link">
-                                <h3 class="course-card-title">Learn Git ↗</h3>
+                        <div class="card-content">
+                            <a href="https://www.boot.dev/courses/learn-git" target="_blank" class="card-title-link">
+                                <h3 class="card-title">Learn Git ↗</h3>
                             </a>
-                            <p class="course-card-desc">Master version control with Git. Learn branching, merging,
+                            <p class="card-desc">Master version control with Git. Learn branching, merging,
                                 collaboration workflows, remote repositories, and advanced Git techniques for
                                 professional development.</p>
-                            <div class="course-chapters">
-                                <span class="course-chapter">Git Basics</span>
-                                <span class="course-chapter">Commits</span>
-                                <span class="course-chapter">Branching</span>
-                                <span class="course-chapter">Merging</span>
-                                <span class="course-chapter">Remote</span>
-                                <span class="course-chapter">Collaboration</span>
-                                <span class="course-chapter">Rebasing</span>
-                                <span class="course-chapter">Advanced</span>
+                            <div class="card-badges">
+                                <span class="badge">Git Basics</span>
+                                <span class="badge">Commits</span>
+                                <span class="badge">Branching</span>
+                                <span class="badge">Merging</span>
+                                <span class="badge">Remote</span>
+                                <span class="badge">Collaboration</span>
+                                <span class="badge">Rebasing</span>
+                                <span class="badge">Advanced</span>
                             </div>
                         </div>
                     </div>
-                    <div class="course-card">
+                    <div class="card">
                         <a href="https://www.boot.dev/courses/learn-object-oriented-programming-in-python"
-                            target="_blank" class="course-card-img-link">
+                            target="_blank" class="card-img-link">
                             <img src="images/learn_object_oriented_programming_in_python.png"
                                 alt="Learn Object Oriented Programming in Python Course Certificate - Brian Jekel"
-                                class="course-card-img">
+                                class="card-img">
                         </a>
-                        <div class="course-card-content">
+                        <div class="card-content">
                             <a href="https://www.boot.dev/courses/learn-object-oriented-programming-in-python"
-                                target="_blank" class="course-card-title-link">
-                                <h3 class="course-card-title">Learn Object Oriented Programming in Python ↗</h3>
+                                target="_blank" class="card-title-link">
+                                <h3 class="card-title">Learn Object Oriented Programming in Python ↗</h3>
                             </a>
-                            <p class="course-card-desc">Master object-oriented programming concepts in Python. Learn
+                            <p class="card-desc">Master object-oriented programming concepts in Python. Learn
                                 classes, inheritance, polymorphism, encapsulation, and design patterns for building
                                 maintainable software.</p>
-                            <div class="course-chapters">
-                                <span class="course-chapter">Classes</span>
-                                <span class="course-chapter">Objects</span>
-                                <span class="course-chapter">Inheritance</span>
-                                <span class="course-chapter">Polymorphism</span>
-                                <span class="course-chapter">Encapsulation</span>
-                                <span class="course-chapter">Abstraction</span>
-                                <span class="course-chapter">Design Patterns</span>
-                                <span class="course-chapter">SOLID</span>
+                            <div class="card-badges">
+                                <span class="badge">Classes</span>
+                                <span class="badge">Objects</span>
+                                <span class="badge">Inheritance</span>
+                                <span class="badge">Polymorphism</span>
+                                <span class="badge">Encapsulation</span>
+                                <span class="badge">Abstraction</span>
+                                <span class="badge">Design Patterns</span>
+                                <span class="badge">SOLID</span>
                             </div>
                         </div>
                     </div>
-                    <div class="course-card">
-                        <a href="https://www.boot.dev/courses/learn-sql" target="_blank" class="course-card-img-link">
+                    <div class="card">
+                        <a href="https://www.boot.dev/courses/learn-sql" target="_blank" class="card-img-link">
                             <img src="images/learn_sql.png" alt="Learn SQL Course Certificate - Brian Jekel"
-                                class="course-card-img">
+                                class="card-img">
                         </a>
-                        <div class="course-card-content">
-                            <a href="https://www.boot.dev/courses/learn-sql" target="_blank"
-                                class="course-card-title-link">
-                                <h3 class="course-card-title">Learn SQL ↗</h3>
+                        <div class="card-content">
+                            <a href="https://www.boot.dev/courses/learn-sql" target="_blank" class="card-title-link">
+                                <h3 class="card-title">Learn SQL ↗</h3>
                             </a>
-                            <p class="course-card-desc">Master SQL database programming. Learn to write complex queries,
+                            <p class="card-desc">Master SQL database programming. Learn to write complex queries,
                                 design schemas, optimize performance, and work with relational databases for data-driven
                                 applications.</p>
-                            <div class="course-chapters">
-                                <span class="course-chapter">SQL Basics</span>
-                                <span class="course-chapter">SELECT</span>
-                                <span class="course-chapter">WHERE</span>
-                                <span class="course-chapter">JOINS</span>
-                                <span class="course-chapter">Aggregation</span>
-                                <span class="course-chapter">Subqueries</span>
-                                <span class="course-chapter">Indexing</span>
-                                <span class="course-chapter">Performance</span>
+                            <div class="card-badges">
+                                <span class="badge">SQL Basics</span>
+                                <span class="badge">SELECT</span>
+                                <span class="badge">WHERE</span>
+                                <span class="badge">JOINS</span>
+                                <span class="badge">Aggregation</span>
+                                <span class="badge">Subqueries</span>
+                                <span class="badge">Indexing</span>
+                                <span class="badge">Performance</span>
                             </div>
                         </div>
                     </div>
-                    <div class="course-card">
+                    <div class="card">
                         <a href="https://www.boot.dev/courses/learn-data-structures-and-algorithms-in-python"
-                            target="_blank" class="course-card-img-link">
+                            target="_blank" class="card-img-link">
                             <img src="images/learn_data_structures_and_algorithms_in_python.png"
                                 alt="Learn Data Structures and Algorithms in Python Course Certificate - Brian Jekel"
-                                class="course-card-img">
+                                class="card-img">
                         </a>
-                        <div class="course-card-content">
+                        <div class="card-content">
                             <a href="https://www.boot.dev/courses/learn-data-structures-and-algorithms-in-python"
-                                target="_blank" class="course-card-title-link">
-                                <h3 class="course-card-title">Learn Data Structures and Algorithms in Python ↗</h3>
+                                target="_blank" class="card-title-link">
+                                <h3 class="card-title">Learn Data Structures and Algorithms in Python ↗</h3>
                             </a>
-                            <p class="course-card-desc">Master fundamental data structures and algorithms. Learn arrays,
+                            <p class="card-desc">Master fundamental data structures and algorithms. Learn arrays,
                                 linked lists, trees, graphs, sorting algorithms, and algorithmic complexity analysis for
                                 efficient problem solving.</p>
-                            <div class="course-chapters">
-                                <span class="course-chapter">Arrays</span>
-                                <span class="course-chapter">Linked Lists</span>
-                                <span class="course-chapter">Stacks</span>
-                                <span class="course-chapter">Queues</span>
-                                <span class="course-chapter">Trees</span>
-                                <span class="course-chapter">Graphs</span>
-                                <span class="course-chapter">Sorting</span>
-                                <span class="course-chapter">Searching</span>
-                                <span class="course-chapter">Big O</span>
+                            <div class="card-badges">
+                                <span class="badge">Arrays</span>
+                                <span class="badge">Linked Lists</span>
+                                <span class="badge">Stacks</span>
+                                <span class="badge">Queues</span>
+                                <span class="badge">Trees</span>
+                                <span class="badge">Graphs</span>
+                                <span class="badge">Sorting</span>
+                                <span class="badge">Searching</span>
+                                <span class="badge">Big O</span>
                             </div>
                         </div>
                     </div>
-                    <div class="course-card">
+                    <div class="card">
                         <a href="https://www.boot.dev/courses/learn-functional-programming-in-python" target="_blank"
-                            class="course-card-img-link">
+                            class="card-img-link">
                             <img src="images/learn_functional_programming_in_python.png"
                                 alt="Learn Functional Programming in Python Course Certificate - Brian Jekel"
-                                class="course-card-img">
+                                class="card-img">
                         </a>
-                        <div class="course-card-content">
+                        <div class="card-content">
                             <a href="https://www.boot.dev/courses/learn-functional-programming-in-python"
-                                target="_blank" class="course-card-title-link">
-                                <h3 class="course-card-title">Learn Functional Programming in Python ↗</h3>
+                                target="_blank" class="card-title-link">
+                                <h3 class="card-title">Learn Functional Programming in Python ↗</h3>
                             </a>
-                            <p class="course-card-desc">Explore functional programming paradigms in Python. Learn pure
+                            <p class="card-desc">Explore functional programming paradigms in Python. Learn pure
                                 functions, immutability, higher-order functions, decorators, and functional design
                                 patterns for cleaner code.</p>
-                            <div class="course-chapters">
-                                <span class="course-chapter">Pure Functions</span>
-                                <span class="course-chapter">Immutability</span>
-                                <span class="course-chapter">Higher-order</span>
-                                <span class="course-chapter">Lambda</span>
-                                <span class="course-chapter">Map/Filter</span>
-                                <span class="course-chapter">Reduce</span>
-                                <span class="course-chapter">Decorators</span>
-                                <span class="course-chapter">Closures</span>
+                            <div class="card-badges">
+                                <span class="badge">Pure Functions</span>
+                                <span class="badge">Immutability</span>
+                                <span class="badge">Higher-order</span>
+                                <span class="badge">Lambda</span>
+                                <span class="badge">Map/Filter</span>
+                                <span class="badge">Reduce</span>
+                                <span class="badge">Decorators</span>
+                                <span class="badge">Closures</span>
                             </div>
                         </div>
                     </div>
@@ -430,20 +424,17 @@
             const navItems = document.querySelectorAll('.nav li[data-section]');
             const sections = Array.from(document.querySelectorAll('main > section[id]'));
 
-            // Map section id to nav li
             const sectionToNav = {};
             navItems.forEach(li => {
                 sectionToNav[li.dataset.section] = li;
             });
 
-            // Add click event to nav items for smooth scroll to 1/4 up the viewport
             navItems.forEach(li => {
                 li.addEventListener('click', function (e) {
                     const sectionId = li.dataset.section;
                     const section = document.getElementById(sectionId);
                     if (section) {
                         e.preventDefault();
-                        // Calculate scroll position to bring the top of the section to 2/3 up the viewport
                         const rect = section.getBoundingClientRect();
                         const sectionTop = rect.top + window.scrollY;
                         const offset = window.innerHeight * (1 / 4);
