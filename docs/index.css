@@ -466,16 +466,16 @@ a.card-title-link:focus .card-title {
 @media (max-width: 750px) {
 
   h3 {
-    font-size: 4cqw;
+    font-size: calc(var(--h3-font-size) * 1.5);
   }
 
   h4 {
     justify-self: center;
-    font-size: 4.5cqw;
+    font-size: calc(var(--h4-font-size) * 1.5);
   }
 
   p {
-    font-size: 3cqw;
+    font-size: calc(var(--paragraph-font-size) * 1.5);
   }
 
   .badge {
@@ -495,6 +495,10 @@ a.card-title-link:focus .card-title {
     padding: 24px 0;
   }
 
+  .card-desc {
+    font-size: calc(var(--paragraph-font-size) * 1.5);
+  }
+
   .card-img-link {
     width: 50%;
   }
@@ -505,6 +509,10 @@ a.card-title-link:focus .card-title {
     width: 100%;
   }
   
+  .skills-category {
+    font-size: calc(var(--list-font-size) * 1.5);
+  }
+
   .skills-matrix {
     grid-template-columns: 1fr;
   }
