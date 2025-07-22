@@ -503,7 +503,7 @@ a.card-title-link:focus .card-title {
   }
 
   .main-content {
-    padding: 0;
+    padding: 20px;
   }
 
   .sidebar {
@@ -513,11 +513,15 @@ a.card-title-link:focus .card-title {
   }
   
   .sidebar-content {
-    padding: 0;
+    padding: 20px;
   }
 
   .skills-category {
     font-size: calc(var(--list-font-size) * 1.5);
+  }
+
+  .skill-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .skills-matrix {
