@@ -35,6 +35,7 @@ body {
   height: 100%;
   line-height: 1.4;
   letter-spacing: .02em;
+  margin: 0;
   width: 100%;
 }
 
@@ -143,7 +144,6 @@ ul {
 }    
 
 .card-desc {
-  /* color: var(--color-text-secondary); */
   font-size: var(--paragraph-font-size);
   font-weight: calc(var(--font-weight-base) - 100);
   hyphens: auto;
@@ -496,12 +496,26 @@ a.card-title-link:focus .card-title {
     width: 50%;
   }
     
+  .container {
+    grid-template-columns: 1fr;
+    width: 100vw;
+    min-width: 0;
+  }
+
+  .main-content {
+    padding: 0;
+  }
+
   .sidebar {
     height: auto;
     position: static;
     width: 100%;
   }
   
+  .sidebar-content {
+    padding: 0;
+  }
+
   .skills-category {
     font-size: calc(var(--list-font-size) * 1.5);
   }
