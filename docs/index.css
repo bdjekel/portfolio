@@ -92,8 +92,8 @@ ul {
 .badge {
   display: inline-block;
   background: transparent;
-  border: 1px solid var(--color-text-secondary);
-  color: var(--color-text-secondary);
+  border: 1px solid var(--color-text-primary);
+  color: var(--color-text-primary);
   font-size: 1rem;
   font-weight: calc(var(--font-weight-base) - 100);
   padding: 3px 10px;
@@ -125,14 +125,6 @@ ul {
   border-color: var(--color-text-primary);
 }
 
-.card:hover .card-desc {
-  color: var(--color-text-primary);
-}  
-
-.card:hover .card-title {
-  color: var(--color-text-primary);
-}  
-
 .card-badges {
   display: flex;
   flex-wrap: wrap;
@@ -151,7 +143,7 @@ ul {
 }    
 
 .card-desc {
-  color: var(--color-text-secondary);
+  /* color: var(--color-text-secondary); */
   font-size: var(--paragraph-font-size);
   font-weight: calc(var(--font-weight-base) - 100);
   hyphens: auto;
@@ -180,7 +172,7 @@ ul {
 }  
 
 .card-title {
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   display: inline;
   font-weight: calc(var(--font-weight-base) + 100);
   margin: 0;
