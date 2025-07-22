@@ -471,6 +471,7 @@ a.card-title-link:focus .card-title {
 
   h4 {
     justify-self: center;
+    text-align: center;
     font-size: calc(var(--h4-font-size) * 1.5);
   }
 
