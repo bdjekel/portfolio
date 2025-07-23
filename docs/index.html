@@ -205,9 +205,8 @@
                         e.preventDefault();
                         const rect = section.getBoundingClientRect();
                         const sectionTop = rect.top + window.scrollY;
-                        const offset = window.innerHeight * (1 / 4);
-                        const scrollTo = sectionTop - offset;
-                        window.scrollTo({ top: scrollTo, behavior: 'smooth' });
+                        // Scroll so the section is at the very top
+                        window.scrollTo({ top: sectionTop, behavior: 'smooth' });
                     }
                 });
             });

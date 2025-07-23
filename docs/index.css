@@ -1,11 +1,10 @@
 :root {
-  --color-bg-primary: #0c0c0c;
-  --color-bg-secondary: #222;
-  --color-text-primary: #fff7e8;
-  --color-text-secondary: #fff7e890;
-  /* --color-text-tertiary: #ffd580; */
-  --color-border-primary: #202533;
-  --color-border-secondary: #d1c7b3;
+  --color-dark-primary: #0c0c0c;
+  --color-dark-secondary: #384151;
+  --color-light-primary: #fff7e8;
+  --color-light-secondary: #fff7e890;
+  --color-border-dark: #202533;
+  --color-border-light: #d1c7b3;
 
   --font-family-heading: "Inter Tight", sans-serif;
   --font-family: "Barlow", sans-serif;
@@ -18,18 +17,19 @@
   --list-font-size: 2.5cqw;
   --font-weight-base: 300;
 
-  --icon-radius: 4px;  
+  --icon-radius: 4px;
+
+  color-scheme: light dark;
 }
 
 html {
+  background: light-dark(var(--color-light-primary), var(--color-dark-primary));
   height: 100%;
   width: 100%;
-  background: var(--color-bg-primary);
 }
 
 body {
-  background: transparent;
-  color: var(--color-text-primary);
+  color: light-dark(var(--color-dark-primary), var(--color-light-primary));
   font-family: var(--font-family);
   font-weight: var(--font-weight-base);
   height: 100%;
@@ -68,10 +68,12 @@ section {
 a,
 a:link,
 a:visited {
-  color: var(--color-text-secondary);
+  /* TODO: make light mode color contrast more with the standard light mode text color.  */
+  color: color(var(--color-dark-primary), var(--color-light-secondary));
+  font-weight: calc(var(--font-weight-base) * 1.4);
   text-decoration: none;
   /* underline animation */
-  background-image: linear-gradient(var(--color-text-primary), var(--color-text-primary));
+  background-image: linear-gradient(light-dark(var(--color-dark-primary), var(--color-light-primary)), light-dark(var(--color-dark-primary), var(--color-light-primary)));
   background-size: 0% 1px;
   background-position: 0 100%;
   background-repeat: no-repeat;
@@ -81,8 +83,8 @@ a:visited {
 
 a:hover,
 a:active {
-  color: var(--color-text-primary);
   background-size: 100% 1px;
+  color: light-dark(var(--color-dark-primary), var(--color-light-primary));
 }  
 
 ul {
@@ -93,8 +95,8 @@ ul {
 .badge {
   display: inline-block;
   background: transparent;
-  border: 1px solid var(--color-text-primary);
-  color: var(--color-text-primary);
+  border: 1px solid light-dark(var(--color-dark-primary), var(--color-light-primary));
+  color: light-dark(var(--color-dark-primary), var(--color-light-primary));
   font-size: 1rem;
   font-weight: calc(var(--font-weight-base) - 100);
   padding: 3px 10px;
@@ -122,8 +124,8 @@ ul {
 }  
 
 .card:hover .badge {
-  color: var(--color-text-primary);
-  border-color: var(--color-text-primary);
+  color: light-dark(var(--color-dark-primary), var(--color-light-primary));
+  border-color: light-dark(var(--color-dark-primary), var(--color-light-primary));
 }
 
 .card-badges {
@@ -172,7 +174,7 @@ ul {
 }  
 
 .card-title {
-  color: var(--color-text-primary);
+  color: light-dark(var(--color-dark-primary), var(--color-light-primary));
   display: inline;
   font-weight: calc(var(--font-weight-base) + 100);
   margin: 0;
@@ -180,7 +182,7 @@ ul {
   transition: color 0.2s;
   white-space: nowrap;
   position: relative;
-  background-image: linear-gradient(var(--color-text-primary), var(--color-text-primary));
+  background-image: linear-gradient(light-dark(var(--color-dark-primary), var(--color-light-primary)), light-dark(var(--color-dark-primary), var(--color-light-primary)));
   background-size: 0% 1px;
   background-position: 0 100%;
   background-repeat: no-repeat;
@@ -197,7 +199,7 @@ a.card-title-link {
 
 a.card-title-link:hover .card-title,
 a.card-title-link:focus .card-title {
-  color: var(--color-text-primary);
+  color: light-dark(var(--color-dark-primary), var(--color-light-primary));
   background-size: 100% 1px;
 }
 
@@ -213,7 +215,7 @@ a.card-title-link:focus .card-title {
 }  
 
 .custom-tooltip {
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-dark-secondary);
   border-radius: 6px;
   bottom: 100%; /* Position above the name */
   color: #fff;
@@ -279,7 +281,7 @@ a.card-title-link:focus .card-title {
 }      
 
 .item-line {
-  background: var(--color-border-secondary);
+  background: var(--color-border-light);
   border-radius: .5px;
   display: inline-block;
   height: .5px;
@@ -308,7 +310,7 @@ a.card-title-link:focus .card-title {
 }  
 
 .name {
-  color: var(--color-text-primary);
+  color: light-dark(var(--color-dark-primary), var(--color-light-primary));
   cursor: pointer;
   display: block;
   font-family: var(--font-family-heading);
@@ -332,7 +334,8 @@ a.card-title-link:focus .card-title {
 
 
 .nav li {
-  color: var(--color-text-secondary);
+  /* TODO: add better inactive text color for light mode */
+  color: light-dark(var(--color-dark-secondary), var(--color-light-secondary));
   cursor: pointer;
   margin: 8px;
   transition: color 0.2s;
@@ -340,7 +343,7 @@ a.card-title-link:focus .card-title {
 
 .nav li.active,
 .nav li:hover {
-  color: var(--color-text-primary);
+  color: light-dark(var(--color-dark-primary), var(--color-light-primary));
 }      
 
 .nav-line {
@@ -349,14 +352,14 @@ a.card-title-link:focus .card-title {
   height: 2px;
   width: 24px;
   margin-right: 16px;
-  background: var(--color-border-secondary);
+  background: light-dark(var(--color-dark-primary), var(--color-border-light));
   border-radius: 1px;
   transition: width 0.3s, background 0.3s;
 }          
 
 .nav li.active .nav-line {
   width: 40px;
-  background: var(--color-text-primary);
+  background: light-dark(var(--color-dark-primary), var(--color-light-primary));
 }          
 
 .project-cards {
@@ -367,7 +370,7 @@ a.card-title-link:focus .card-title {
 }  
 
 .section-line {
-  background: var(--color-border-secondary);
+  background: var(--color-border-light);
   border-radius: 1px;
   display: inline-block;
   height: 1px;
@@ -383,7 +386,7 @@ a.card-title-link:focus .card-title {
   min-width: 280px;
   height: 100vh;
   background: transparent;
-  border-right: 1px solid var(--color-border-primary);
+  border-right: 1px solid var(--color-border-dark);
   z-index: 10;
   /* Container query context for sidebar (enables container queries on sidebar) */
   container-type: inline-size;
@@ -427,12 +430,13 @@ a.card-title-link:focus .card-title {
 }          
 
 .subtitle {
-  color: var(--color-text-secondary);
+
+  color: light-dark(var(--color-dark-primary), var(--color-light-secondary));
   margin: 0;
 }            
 
 .title {
-  color: var(--color-text-secondary);
+  color: light-dark(var(--color-dark-primary), var(--color-light-secondary));
   font-size: 4cqw;
   margin: 0;
 }          
