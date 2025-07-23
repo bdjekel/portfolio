@@ -92,6 +92,16 @@ ul {
   padding: 0;
 }
 
+footer {
+  padding: 10px;
+  justify-items: end;
+}
+
+footer p {
+  font-size: 20px;
+  padding: 0;
+}
+
 .badge {
   display: inline-block;
   background: transparent;

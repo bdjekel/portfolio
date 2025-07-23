@@ -179,14 +179,16 @@
                             <li>Responsive Design</li>
                             <li>CSS Grid</li>
                             <li>Container Queries</li>
-                            <li>Accessibility</li>
+                            <li>Accessibility (WCAG)</li>
                         </ul>
                     </div>
                 </div>
     </div>
     </section>
     </main>
-    </div>
+    <footer class="footer">
+        <p>&copy; <span id="copyright-year"></span> Brian Jekel. All rights reserved.</p>
+    </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const navItems = document.querySelectorAll('.nav li[data-section]');
@@ -242,6 +244,8 @@
             window.addEventListener('scroll', updateActiveNav, { passive: true });
             window.addEventListener('resize', updateActiveNav);
             updateActiveNav();
+            // Set copyright year
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
         });
 
     </script>
