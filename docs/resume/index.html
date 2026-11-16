@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Brian Jekel Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Layout: one centered resume sheet; section labels in a narrow left column on wide screens, stacked on phones. */
+:root{
+  --bg:#eef0f3; --sheet:#ffffff; --fg:#1b2330; --muted:#586374; --line:#dde1e8;
+  --accent:#1f5f8b;
+  --font-body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-head:'Space Grotesk','Inter',system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f141b; --sheet:#181f29; --fg:#e7ebf1; --muted:#9aa5b5; --line:#2b3442; --accent:#6fb2dd; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0f141b; --sheet:#181f29; --fg:#e7ebf1; --muted:#9aa5b5; --line:#2b3442; --accent:#6fb2dd; color-scheme:dark;}
+*{box-sizing:border-box}
+img{max-width:100%}
+[hidden]:not([hidden=until-found i]){display:none!important}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:14.5px;line-height:1.5;
+  padding-block:32px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));}
+.sheet{max-width:820px;margin:0 auto;background:var(--sheet);border:1px solid var(--line);border-radius:6px;padding:40px clamp(20px,5vw,48px);display:flex;flex-direction:column;gap:26px;min-width:0}
+h1{font-family:var(--font-head);font-weight:600;font-size:2rem;line-height:1.1;margin:0;letter-spacing:-.01em}
+.contact{margin:6px 0 0;color:var(--muted)}
+.contact a{color:var(--accent);text-decoration:none}
+.contact a:hover,.contact a:focus-visible{text-decoration:underline}
+section{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 24px;padding-top:18px;border-top:1px solid var(--line)}
+h2{font-family:var(--font-body);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:3px 0 0}
+.body{display:flex;flex-direction:column;gap:20px;min-width:0}
+p{margin:0}
+.job-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 16px}
+.job-title{font-weight:600}
+.job-dates{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.job-meta{color:var(--muted);margin-top:1px}
+ul{margin:8px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
+li::marker{color:var(--accent)}
+.skills{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 16px;margin:0}
+.skills dt{font-weight:600}
+.skills dd{margin:0}
+.edu{display:flex;flex-direction:column;gap:4px}
+@media (max-width:640px){
+  section{grid-template-columns:1fr}
+  .skills{grid-template-columns:1fr;gap:0}
+  .skills dd{margin-bottom:8px}
+  .job-dates{white-space:normal}
+}
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header>
+    <h1>Brian Jekel</h1>
+    <p class="contact">Little Rock, Arkansas · <a href="https://www.linkedin.com/in/brian-jekel/">linkedin.com/in/brian-jekel</a></p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <div class="body">
+      <p>Software engineer who builds production data pipelines, back-end services and agentic AI applications, with a prior career as a construction project manager and mechanical design engineer. Experienced at scoping technical work, tracking schedules and budgets, coordinating contractors and checking delivered work against specifications. Learns new domains and languages quickly.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="body">
+      <dl class="skills">
+        <dt>Engineering</dt>
+        <dd>Go, Python, SQL, TypeScript, React, REST and GraphQL APIs, Apache Spark, Databricks</dd>
+        <dt>AI and automation</dt>
+        <dd>Agentic AI applications, streaming LLM responses, API integrations, workflow automation, AI-assisted development standards</dd>
+        <dt>Infrastructure</dt>
+        <dd>AWS, Terraform, Kubernetes, CI/CD with Bitbucket Pipelines, Git, GitHub</dd>
+        <dt>Program management</dt>
+        <dd>Project scoping and specifications, schedule and budget tracking, contractor and vendor accountability, quality checks against requirements, client and stakeholder communication, technical documentation</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section>
+    <h2>Technical Experience</h2>
+    <div class="body">
+      <article>
+        <div class="job-head">
+          <span class="job-title">Software Engineer, Data Engineering · First Orion</span>
+          <span class="job-dates">Nov 2025 – Present</span>
+        </div>
+        <p class="job-meta">Little Rock, Arkansas</p>
+        <ul>
+          <li>Building a full-stack agentic AI research application for a telecom customer, with a React front end, a serverless back end and a custom Databricks agent that streams responses in real time.</li>
+          <li>Designed a secure chat architecture with streaming over a managed GraphQL API, server-owned conversation history, identity-based authorization and secretless Databricks authentication through workload identity federation.</li>
+          <li>Drive technical discovery for new integrations, assessing feasibility, sandbox requirements and vendor risk, and write the designs, architecture diagrams and READMEs the team builds from.</li>
+          <li>Built and maintain an integration between Cisco Unified Communications Manager and an internal call protection REST API, including token management. Extended Go microservices for real-time call protection scoring and caller name display.</li>
+          <li>Built a streaming ingestor for high-volume telephony data that processes about 43.5 million events per day into a production Unity Catalog table.</li>
+          <li>Delivered a Spark Declarative Pipeline for a multi-billion-row S3 dataset that uses Auto Loader to avoid reprocessing history, and an idempotent batch job that enriches webhook events through a third-party API.</li>
+          <li>Deploy software to AWS through Bitbucket Pipelines CI/CD using short-lived OIDC credentials, and automate AWS and Databricks infrastructure with Terraform, Kubernetes and Databricks Asset Bundles so resources deploy repeatably from code.</li>
+          <li>Review application, data and infrastructure code for security and type safety, and contribute to the team's AI coding standards and per-repo AI steering documents.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Project Management Experience</h2>
+    <div class="body">
+      <article>
+        <div class="job-head">
+          <span class="job-title">Design Associate, Mechanical EIT · The Haskell Company</span>
+          <span class="job-dates">Jan 2021 – Nov 2025</span>
+        </div>
+        <p class="job-meta">Remote</p>
+        <ul>
+          <li>Tracked budgets, schedules and design deliverables with project teams, and compiled design packages through each phase (SD, DD, CD) on time.</li>
+          <li>Worked with clients, contractors and construction managers to resolve design changes and keep projects compliant with requirements.</li>
+          <li>Reviewed the work of junior engineers and project staff for quality and accuracy.</li>
+          <li>Validated construction costs, proposed value-engineering options and verified design implementation through field inspections.</li>
+        </ul>
+      </article>
+      <article>
+        <div class="job-head">
+          <span class="job-title">Assistant Project Manager · The Haskell Company and Brasfield &amp; Gorrie</span>
+          <span class="job-dates">Jun 2017 – Jan 2021</span>
+        </div>
+        <p class="job-meta">Brasfield &amp; Gorrie (Jacksonville, Florida), then The Haskell Company (Assistant Project Manager II)</p>
+        <ul>
+          <li>Led on-site operations for large, complex design-build projects and served as the primary contact for the owners' representatives.</li>
+          <li>Reviewed design documents for constructability and scope clarity before work started, so subcontractors and site staff had a defined scope.</li>
+          <li>Built and managed project schedules, ran job site meetings and sequenced work across subcontractors.</li>
+          <li>Held subcontractors and suppliers accountable to contract requirements and schedules, and resolved performance issues as they came up.</li>
+          <li>Checked completed work against engineered drawings to verify compliance and resolve quality issues before handoff.</li>
+          <li>Controlled budgets for labor, materials and overhead, and approved cost reports and financial summaries.</li>
+          <li>Managed client relations through progress meetings, correspondence and change orders, and coordinated project management and field staff as one team.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="body">
+      <div class="edu">
+        <p><strong>B.S., Mechanical Engineering</strong> — University of Arkansas</p>
+        <p><strong>B.A., Psychology</strong></p>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
